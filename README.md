@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 ```console
-python app.py
+python runserver.py
 ```
 
 <p style="font-size: 20px; margin-top: 20px;">To start operations with the database and navigate through some API endpoints ... the user to the endpoints will have to be authorized by making use of the model of login and signup and its authentication.</p>
