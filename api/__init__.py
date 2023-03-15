@@ -37,7 +37,7 @@ def create_app():
     api.add_namespace(update_namespace, path='/api/update')
     api.add_namespace(admin_auth_namespace, path='/api/auth/admin')
     api.add_namespace(grading_namespace, path='/api/auth/admin/grading')
-    
+
     @api.errorhandler(BadRequest)
     def handle_bad_request_error(error):
         return {'message': 'Bad Request Error'}, 400
@@ -45,13 +45,13 @@ def create_app():
     @api.errorhandler(InternalServerError)
     def handle_internal_server_error(error):
         return {'message': 'DataBase Error'}, 500
-    
+
     @api.errorhandler(NotFound)
     def handle_bad_request_error(error):
         return {'message': 'Not Found'}, 400
 
     @api.errorhandler(MethodNotAllowed)
     def handle_internal_server_error(error):
-        return {'message': 'Method Not Allowed'}, 500
-    
+        return {'message': 'Method Not Allowed'}, 400
+
     return app
