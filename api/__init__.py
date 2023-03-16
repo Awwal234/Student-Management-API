@@ -53,5 +53,5 @@ def create_app():
     @api.errorhandler(MethodNotAllowed)
     def handle_internal_server_error(error):
         return {'message': 'Method Not Allowed'}, 400
-
+    
     return app
